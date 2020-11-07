@@ -1,0 +1,24 @@
+{
+  "name": "advanced-css-practice",
+  "version": "1.0.0",
+  "description": "Advenced usages of CSS tricks with Sass, Flex Box and Grid Layout and Animations",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass ./sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaellins/advanced-css-practice.git"
+  },
+  "keywords": [],
+  "author": "Raphael lins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphaellins/advanced-css-practice/issues"
+  },
+  "homepage": "https://github.com/raphaellins/advanced-css-practice#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^5.0.0"
+  }
+}
