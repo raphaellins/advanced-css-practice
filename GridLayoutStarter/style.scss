@@ -1,0 +1,111 @@
+// .challenge{
+//     width: 1000px;
+//     margin: 30px auto;
+
+//     display: grid;
+//     grid-template-rows: 100px 200px 400px 100px;
+//     grid-template-columns: repeat(3, 1fr) 200px;
+//     grid-gap: 30px;
+
+//     & > * {
+//         background-color: orangered;
+//         padding: 20px;
+//         color: white;
+//         font-size: 30px;
+//         font-family: sans-serif;
+//     }
+
+//     .header{
+//         grid-column: 1 / -1;
+//     }
+
+//     .sidebar{
+//         grid-column: 4 / 5;
+//         grid-row: 2 / span 2;
+//     }
+
+//     .main-content{
+//         grid-column: 1 / span 3;
+//     }
+
+//     .footer{
+//         grid-column: 1 / -1;
+//     }
+
+// }
+
+// .challenge {
+//   width: 1000px;
+//   margin: 30px auto;
+
+//   display: grid;
+//   grid-template-rows: [header-start] 100px [header-end boxes-start] 200px [box-end main-start] 400px [main-end footer-start] 100px [footer-end];
+
+//   grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 200px;
+//   grid-gap: 30px;
+
+//   & > * {
+//     background-color: orangered;
+//     padding: 20px;
+//     color: white;
+//     font-size: 30px;
+//     font-family: sans-serif;
+//   }
+
+//   .header {
+//     grid-column: col-start 1 / grid-end;
+//   }
+
+//   .sidebar {
+//     grid-column:col-end 3 / grid-end;
+//     grid-row: box-start / main-end;
+//   }
+
+//   .main-content {
+//     grid-column: col-start 1 /col-end 3;
+//   }
+
+//   .footer {
+//     grid-column: col-start 1 / grid-end;
+//   }
+// }
+
+.challenge {
+  width: 1000px;
+  margin: 30px auto;
+
+  display: grid;
+  grid-template-rows: 100px 200px 400px 100px;
+  grid-template-columns: repeat(3, 1fr) 200px;
+  grid-gap: 30px;
+
+  grid-template-areas:
+    "head head head head"
+    "box box box side"
+    "main main main side"
+    "foot foot foot foot";
+
+  & > * {
+    background-color: orangered;
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+  }
+
+  .header {
+    grid-area: head;
+  }
+
+  .sidebar {
+    grid-area: side;
+  }
+
+  .main-content {
+    grid-area: main;
+  }
+
+  .footer {
+    grid-area: foot;
+  }
+}
